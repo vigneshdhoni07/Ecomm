@@ -1,0 +1,109 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Ecomm API",
+        "description": "Ecomm application",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3200/api/",
+            "description": "Optional server description, e.g. Main (production) server"
+        }
+    ],
+    "components": {
+        "securitySchemes": {
+            "JWT": {
+                "type": "apiKey",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }},
+    "paths": {
+            "/auth/signUp": {
+                "post": {
+                    "tags":["Users"],
+                    "summary": "new user.",
+                    "description": "Api to create new user",
+                    "requestBody": {
+                        "description": "new user to create",
+                        "required": true,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "email": {
+                                            "type": "string"
+                                        },
+                                        "password": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "responses": {
+                        "200": {
+                            "description": "User created successfully"
+                        }
+                    }
+                }
+            },
+            "/auth/signIn": {
+                "post": {
+                    "tags":["Users"],
+                    "summary": "user login.",
+                    "description": "Api to login user",
+                    "requestBody": {
+                        "description": "new user to create",
+                        "required": true,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "email": {
+                                            "type": "string"
+                                        },
+                                        "password": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "responses": {
+                        "200": {
+                            "description": "login successful"
+                        }
+                    }
+                }
+            },
+            "/product/": {
+                "get": {
+                    "tags":["Products"],    
+                    "summary": "products",
+                    "description": "get all products",
+                    "responses": {
+                        "200": {
+                            "description": "product fetched successfully"
+                        }
+                    },
+                    "security": [
+                        {
+                            "JWT": {}
+                        }
+                    ]
+                }
+            }
+        }
+    }

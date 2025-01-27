@@ -1,0 +1,11 @@
+{"level":"info","message":"url :/api/cart?productId=3&quantity=8 reqBody:{}"}
+{"level":"info","message":"url :/api/product reqBody:{}"}
+{"level":"info","message":"url :/api/product reqBody:{}"}
+{"level":"info","message":"url :/api/product/5 reqBody:{}"}
+{"level":"info","message":"url :/api/product/10 reqBody:{}"}
+{"level":"info","message":"url :/api/product/10 reqBody:{}"}
+{"level":"info","message":"url :/api/product/10 reqBody:{}"}
+{"level":"info","message":"url :/api/product/10 reqBody:{}"}
+{"level":"info","message":"url :/api/product/10 reqBody:{}"}
+{"level":"info","message":"url :/api/product/10 reqBody:{}"}
+{"level":"info","message":"url :/api/product/10 reqBody:{}"}
